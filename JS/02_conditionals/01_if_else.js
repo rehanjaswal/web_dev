@@ -4,3 +4,5 @@ function canVote(age) {
 }
 let userAge = 17
 console.log(canVote(userAge));
+
+
