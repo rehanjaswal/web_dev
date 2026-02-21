@@ -7,3 +7,4 @@ while (j <= 10) {
     console.log(j)  // logs 0 to 10
     j++
 } 
+
