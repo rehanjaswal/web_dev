@@ -1,6 +1,15 @@
-function isLegal(user) {
-    if (user.age >= 18) console.log(user.name + " is allowed to vote")
-    else console.log(user.name + " is not allowed to vote")
+// 
+
+
+// method 2 (returning a value)
+
+function getLegalUsers(users) {
+    let legalUsers = []
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].age >= 18)
+            legalUsers.push(users[i])
+    }
+    return legalUsers
 }
 
 let users = [
@@ -28,9 +37,7 @@ let users = [
     }
     ]
 
-console.log(users[0].address[0].place)
-
-for (let i = 0; i < users.length; i++) {
-    isLegal(users[i])
-}
-// users.forEach(isLegal)
+let allowedUsers = getLegalUsers(users)
+console.log(allowedUsers)
+console.log(typeof allowedUsers)  // logs object, as an array is a specialised type of an object in JS
+console.log(Array.isArray(allowedUsers))  // if array -> returns true...else false
