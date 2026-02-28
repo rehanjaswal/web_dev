@@ -21,3 +21,5 @@ function callBack() {
 // better way incoming
 
 setTimeout(callBack, 2000)   // (fn name, time (in ms))
+
+console.log(__dirname)   // logs directory name
