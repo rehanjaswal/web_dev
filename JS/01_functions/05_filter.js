@@ -25,4 +25,4 @@ const ans = arr.filter(function (n) {
     }
 });
 
-console.log(ans)
+console.log(ans);
