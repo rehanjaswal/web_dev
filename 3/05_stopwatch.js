@@ -1,15 +1,14 @@
-let counter = 0;
-
-function callBack() {
-    console.log(counter);
-    counter += 1;
+let ctr = 0;
+function callback() {
+    console.log(ctr)
+    ctr += 1;
 }
 
-setInterval(callBack, 1000)   // call this function EVERY one second, this is different from setTimeout (this calls the function right AFTER the assigned time)
+setInterval(callback, 1000);
 
-let x = 0;
-for (let i = 0; i < 50; i++) {
-    x = x + i;
+let i = 0;
+for (i = 0; i < 9999999999; i++) {
+    i += 1;
 }
 
-console.log(y)
+console.log(i)
