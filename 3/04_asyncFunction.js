@@ -4,7 +4,7 @@ function fileReadCallback(err, contents) {
     console.log(contents);
 }
 
-const contents = fs.readFile("a.txt", "utf-8", fileReadCallback);
+fs.readFile("a.txt", "utf-8", fileReadCallback);
 
 let i = 0;
 for (i = 0; i < 100; i++) {
