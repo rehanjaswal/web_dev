@@ -1,12 +1,7 @@
-/*
-writing a promisified version of readFile
-*/
+// writing a promisified version of readFile (async)
 
-
-// consider the below code as black box for now
-
-const fs = require("fs");
-
+// consider the below code as black box for new Promise((resolve, reject) => {
+    
 function fsReadFilePromisified(filePath, encoding) {
     return new Promise((resolve, reject) => {
         fs.readFile(filePath, encoding, (err, data) => {
@@ -14,10 +9,12 @@ function fsReadFilePromisified(filePath, encoding) {
                 reject(err)
             } else {
                 resolve(data);
-            } 
+            }
         })
     })
 }
+
+const fs = require("fs");
 
 function callback(data) {
     console.log(data)
@@ -30,23 +27,3 @@ function callbackErr() {
 fsReadFilePromisified("a.txt", "utf-8")
     .then(callback)
     .catch(callbackErr)
-    
-
-/*
-    class Promise {
-        constructor() {
-
-        }
-
-        then() {
-    
-        }
-
-        catch() {
-    
-        }
-
-
-    }
-
-*/
