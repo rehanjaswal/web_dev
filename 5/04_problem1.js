@@ -96,7 +96,7 @@ function cleanFile(fileName) {
 async function main() {
     try {
         await cleanFile("a.txt");
-        console.log("done cleaning a.txt!")
+        console.log("done cleaning a.txt!");
     }
     catch(err) {
         console.log("error while cleaning the file");
